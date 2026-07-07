@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1400&q=80"initial-scale=1.0">
+<title>Sociedade Esportiva Palmeiras</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.8;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("https://i.pinimg.com/1200x/26/b1/9e/26b19e06d88d8c825c6afcf62d9cb8ce.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:1.3rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 30px;
+    background:#0b6b2f;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#0e8a3d;
+}
+
+/* MENU */
+
+nav{
+    background:#084d22;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    list-style:none;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#9cffbc;
+}
+
+/* SEÇÕES */
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.titulo{
+    text-align:center;
+    color:#0b6b2f;
+    font-size:2.5rem;
+    margin-bottom:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.section-img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+/* LINHA DO TEMPO */
+
+.timeline{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.timeline-item{
+    background:white;
+    padding:20px;
+    border-left:6px solid #0b6b2f;
+    border-radius:10px;
+}
+
+/* TITULOS */
+
+.titulos-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.titulo-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.numero{
+    font-size:3rem;
+    color:#0b6b2f;
+    font-weight:bold;
+}
+
+/* ÍDOLOS */
+
+.idolos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.idolo{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 12px rgba(0,0,0,.1);
+}
+
+.idolo img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.idolo-content{
+    padding:20px;
+}
+
+.idolo h3{
+    color:#0b6b2f;
+}
+
+/* DIVINO */
+
+.divino{
+    background:linear-gradient(135deg,#0b6b2f,#083a1c);
+    color:white;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.divino img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.divino-content{
+    padding:40px;
+}
+
+.divino h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.stat{
+    background:rgba(255,255,255,.1);
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.stat h3{
+    font-size:2rem;
+}
+
+/* RODAPÉ */
+
+footer{
+    background:#084d22;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:2.5rem;
+}
+
+.divino h2{
+    font-size:2rem;
+}
+
+.section-img{
+    height:250px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>Sociedade Esportiva Palmeiras</h1>
+        <p>Mais de um século de tradição, glórias e paixão.</p>
+        <a href="#historia" class="btn">Conhecer a História</a>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#historia">História</a></li>
+        <li><a href="#fundacao">Fundação</a></li>
+        <li><a href="#linha">Linha do Tempo</a></li>
+        <li><a href="#titulos">Títulos</a></li>
+        <li><a href="#idolos">Ídolos</a></li>
+        <li><a href="#divino">O Divino</a></li>
+    </ul>
+</nav>
+
+<section id="historia">
+    <h2 class="titulo">História do Palmeiras</h2>
+
+    <div class="card">
+        <img class="section-img"
+        src="https://i.pinimg.com/474x/e7/e3/30/e7e3305a70bd941f5972970d1ab7182c.jpg">
+
+        <p>
+            O Palmeiras é um dos clubes mais importantes da história do futebol brasileiro.
+            Fundado em 1914 por imigrantes italianos na cidade de São Paulo,
+            o clube nasceu com o nome de Palestra Italia e rapidamente se tornou
+            uma potência esportiva.
+        </p>
+
+        <br>
+
+        <p>
+            Ao longo de mais de um século de existência, o Verdão construiu uma
+            trajetória marcada por conquistas nacionais e internacionais,
+            revelando craques históricos e formando equipes lendárias como
+            as Academias Palmeiras das décadas de 1960 e 1970.
+        </p>
+
+        <br>
+
+        <p>
+            Atualmente o clube é reconhecido mundialmente por sua estrutura,
+            organização e grande número de títulos, sendo considerado por muitos
+            o maior campeão do futebol brasileiro.
+        </p>
+    </div>
+</section>
+
+<section id="fundacao">
+    <h2 class="titulo">Fundação do Clube</h2>
+
+    <div class="card">
+        <img class="section-img"
+        src="https://www.palmeiras.com.br/wp-content/uploads/2019/08/04.jpg">
+
+        <p>
+            Em 26 de agosto de 1914, membros da comunidade italiana reuniram-se
+            no antigo Salão Alhambra, em São Paulo, para fundar o Palestra Italia.
+            O clube tinha como objetivo representar os imigrantes italianos
+            através do esporte.
+        </p>
+
+        <br>
+
+        <p>
+            Durante a Segunda Guerra Mundial, em 1942, o governo brasileiro
+            proibiu referências aos países do Eixo. Por isso o clube passou a se
+            chamar Sociedade Esportiva Palmeiras, nome que carrega até hoje.
+        </p>
+    </div>
+</section>
+
+<section id="linha">
+    <h2 class="titulo">Linha do Tempo</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>1914</h3>
+            <p>Fundação do Palestra Italia.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>1920</h3>
+            <p>Primeiro Campeonato Paulista.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>1942</h3>
+            <p>Nasce oficialmente a Sociedade Esportiva Palmeiras.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>1960-1970</h3>
+            <p>Era das Academias e domínio nacional.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>1999</h3>
+            <p>Primeira Libertadores da América.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>2020-2021</h3>
+            <p>Duas Libertadores consecutivas.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="titulos">
+    <h2 class="titulo">Principais Títulos</h2>
+
+    <div class="titulos-grid">
+
+        <div class="titulo-card">
+            <div class="numero">12</div>
+            <h3>Brasileiros</h3>
+        </div>
+
+        <div class="titulo-card">
+            <div class="numero">3</div>
+            <h3>Libertadores</h3>
+        </div>
+
+        <div class="titulo-card">
+            <div class="numero">4</div>
+            <h3>Copas do Brasil</h3>
+        </div>
+
+        <div class="titulo-card">
+            <div class="numero">26+</div>
+            <h3>Paulistas</h3>
+        </div>
+
+    </div>
+</section>
+
+<section id="idolos">
+    <h2 class="titulo">Maiores Ídolos</h2>
+
+    <div class="idolos">
+
+        <div class="idolo">
+            <img src="https://i.pinimg.com/736x/71/ff/da/71ffda2618e865a49c848b058f3dcfe5.jpg">
+            <div class="idolo-content">
+                <h3>Heitor</h3>
+                <p>Maior artilheiro da história do Palmeiras e um dos primeiros grandes ídolos do clube.</p>
+            </div>
+        </div>
+
+        <div class="idolo">
+            <img src="https://i.pinimg.com/736x/b4/56/b8/b456b88cc1d006c2e5edf7d70cc86b67.jpg">
+            <div class="idolo-content">
+                <h3>Marcos</h3>
+                <p>Herói da Libertadores de 1999 e símbolo de amor à camisa.</p>
+            </div>
+        </div>
+
+        <div class="idolo">
+            <img src="https://i.pinimg.com/736x/fe/dc/96/fedc9693cb93a8088f9709fde48acc0d.jpg">
+            <div class="idolo-content">
+                <h3>Dudu</h3>
+                <p>Um dos jogadores mais vencedores da era moderna do clube.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="divino">
+    <div class="divino">
+
+        <img src="https://i.pinimg.com/1200x/2b/fd/06/2bfd065618d66946eec9ee0248ba50a3.jpg">
+
+        <div class="divino-content">
+
+            <h2>O DIVINO — Ademir da Guia</h2>
+
+            <p>
+                Ademir da Guia é considerado por muitos torcedores como o maior
+                jogador da história do Palmeiras. Dono de uma técnica refinada,
+                visão de jogo extraordinária e elegância rara, recebeu o apelido
+                de "Divino".
+            </p>
+
+            <br>
+
+            <p>
+                Chegou ao clube em 1962 e permaneceu por 16 temporadas,
+                liderando as lendárias Academias do Palmeiras.
+                Sua influência foi tão grande que se tornou o jogador que mais
+                vestiu a camisa do Verdão.
+            </p>
+
+            <br>
+
+            <p>
+                Mesmo décadas após sua aposentadoria, Ademir continua sendo
+                reverenciado pela torcida como o símbolo máximo da história
+                palmeirense.
+            </p>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <h3>902</h3>
+                    <p>Jogos</p>
+                </div>
+
+                <div class="stat">
+                    <h3>155</h3>
+                    <p>Gols</p>
+                </div>
+
+                <div class="stat">
+                    <h3>16</h3>
+                    <p>Temporadas</p>
+                </div>
+
+                <div class="stat">
+                    <h3>5</h3>
+                    <p>Brasileiros</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="titulo">Craques da Atualidade</h2>
+
+    <div class="idolos">
+
+        <div class="idolo">
+            <img src="https://i.pinimg.com/1200x/76/66/79/76667938f1d4b386f5bf62cc37545909.jpg">
+            <div class="idolo-content">
+                <h3>Raphael Veiga</h3>
+                <p>Referência técnica e decisivo em títulos recentes.</p>
+            </div>
+        </div>
+
+        <div class="idolo">
+            <img src="https://i.pinimg.com/736x/dc/4e/28/dc4e2878682302a2cfb558ae84eb46ee.jpg">
+            <div class="idolo-content">
+                <h3>Gustavo Gómez</h3>
+                <p>Capitão histórico e líder defensivo.</p>
+            </div>
+        </div>
+
+        <div class="idolo">
+            <img src="https://i.pinimg.com/736x/c6/08/33/c60833610f328281619bb80c5b7491f3.jpg">
+            <div class="idolo-content">
+                <h3>Weverton</h3>
+                <p>Um dos maiores goleiros da história recente do clube.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h3>Sociedade Esportiva Palmeiras</h3>
+    <p>Mais de 100 anos de glórias e tradição.</p>
+    <p>Projeto desenvolvido para estudo e personalização.</p>
+</footer>
+
+</body>
+</html>
